@@ -55,7 +55,7 @@ a {
 
 .header {
   min-width: 1220px;
-  background-image: url(image\banner-bg.jpg);
+  background-image: url(../image/banner-bg.jpg);
   background-repeat: no-repeat;
   background-color: black;
   background-size: cover;
@@ -129,7 +129,7 @@ a {
 
 .posts {
   display: flex;
-  padding: 56px 15px;
+  padding: 59px 15px;
   width: 1200px;
   justify-content: space-between;
   margin: 0 auto;
@@ -137,19 +137,18 @@ a {
 
 .trends-container {
   max-width: 1660px;
-  min-width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding-top: 56px;
-
+  flex-wrap: wrap;
 }
 
 .trends-header {
   display: flex;
 }
 
-.trends-title {
+.trends-title, .shop-title {
   font-size: 20px;
   line-height: 29px;
   color: #0f0d0e;
@@ -177,24 +176,104 @@ a {
   display: flex;
   width: 100%;
   margin-top: 38px;
-
+  justify-content: space-between;
 }
 
 .trends-article {
-  width: calc(25% - 5px);
-  height: 319px;
+  display: flex;
+  width: 24.75%;
+  min-height: 319px;
   background-color: #eff6f1;
+  align-items: flex-end;
 }
 
-
-
-.trends-picture {
-  background-image: url(image/shop-item-tablet3.jpg);
+.trends-picture-one {
+  background-image: url(../image/trend1.jpg);
   background-repeat: no-repeat;
-  background-color: black;
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.trends-picture-two {
+  background-image: url(../image/trend2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.trends-picture-three {
+  background-image: url(../image/trend3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.trends-picture-four {
+  background-image: url(../image/trend4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.trends-article::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.trends-title-article {
+  display: flex;
+  width: 370px;
+  min-height: 146px;
+  background-color: rgba(0,0,0,0);
+  border: 3px solid #b59f5b;
+  position: relative;
+  z-index: 1;
+  margin: 0 21px 16px;
+  align-items: flex-end;
+}
+
+.trends-picture {
+  margin-bottom: 31px;
+  margin-left: 31px;
+  margin-top: 34px;
+  padding-right: 20px;
+}
+
+.trends-posts-title {
+  display: flex;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+.trends-posts-title:hover {
+  font-size: 20px;
+  line-height: 24px;
+  color: #b59f5b;
+  font-weight: 700;
+  font-family: "Open Sans";
+}
+
+.trends-tags {
+  display: flex;
+  list-style-type: none;
 }
 
 .all-posts-list { /*main*/
@@ -232,7 +311,7 @@ a {
 
 .posts-tags-link {
   display: flex;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .tags:nth-child(n+2) {
@@ -338,7 +417,7 @@ a {
   content: "";
   position: absolute;
   margin: 6px auto;
-  top: 24px;
+  top: 22px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -396,7 +475,7 @@ a {
 }
 
 .search {
-  margin-top: 61px;
+  margin-top: 70px;
 }
 
 .search-section {
@@ -515,7 +594,7 @@ a {
   background-color: rgba(244,243,241,0);
   border: 3px solid #eeeeee;
   text-align: center;
-  padding: 8px 13px;
+  padding: 3px 14px;
 }
 
 .tags-aside-article > a:hover {
@@ -572,6 +651,57 @@ a {
 }
 
                         /*end aside*/
+.shop-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.shop-title {
+  display: flex;
+  justify-content: center;
+}
+
+.shop {
+  font-size: 20px;
+  line-height: 29px;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 auto;
+}
+
+.shop::after {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  top: 35px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b59f5b;
+  height: 3px;
+  width: 66px;
+}
+
+.shop-article {
+  display: flex;
+  width: 300px;
+  height: 204px;
+  background-color: #eff6f1;
+}
+
+.shop-box {
+  display: flex;
+  justify-content: space-between;
+  padding:  0 23px;
+  margin-top: 38px;
+}
+
+
+
                         /*start footer*/
 
 .footer {
